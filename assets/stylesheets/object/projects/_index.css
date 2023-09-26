@@ -1,0 +1,101 @@
+/* 共通スタイルは外に書く */
+
+.wrapper {
+  width: 100%;
+  max-width:1000px;
+  margin: 0 auto;
+}
+
+.box {
+  padding: 30px;
+}
+
+.card:first-child {
+  margin-top: 0px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.section {
+  border-top: 1px solid #000000;
+}
+
+.section:first-child {
+  border-top: none;
+}
+
+.image {
+  height: auto;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 28px;
+}
+
+.paragraph {
+  margin-top: 10px;
+}
+
+@media only screen and (min-width:796px) { /* PCのレイアウト */
+
+  .big-image {
+    height: 100%;
+  }
+
+  .text {
+    margin-left: 22px;
+  }
+
+  .paragraph {
+    font-size: 12.5px;
+  }
+
+  .card:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+
+  .card:nth-child(2n) > .text {
+    margin-left: 0px;
+    margin-right: 22px;
+  }
+}
+
+@media only screen and (max-width:795px) { /* SPのレイアウト */
+
+  .card {
+    flex-direction: column;
+  }
+
+  .big-image {
+    max-width: 400px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .image {
+    margin: 0 auto;
+  }
+
+  .heading {
+    font-size: 26px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .paragraph {
+    font-size: 16px;
+    text-align: center;
+  }
+}
